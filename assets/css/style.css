@@ -87,7 +87,7 @@ body {
     border-color: #dddddd;
     background-color: #053a9c;
     color: #777777;
-    height: 124px;
+    height: 185px;
     width: 201px;
 }
 
@@ -115,5 +115,9 @@ body {
 }
 
 #randomNumGenerator{
+    font-size: 50px;
+}
+
+#totalScore{
     font-size: 50px;
 }
