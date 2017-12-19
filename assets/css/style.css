@@ -80,6 +80,7 @@ body {
     width: 115px;
     height: 118px;
     margin-top: -84px;
+    font-size: 18px;
 }
 
 .col-md-5{
@@ -121,3 +122,11 @@ body {
 #totalScore{
     font-size: 50px;
 }
+
+/* #win-count{
+    font-size: 12px;
+}
+
+#loss-count{
+    font-size: 12px;
+} */

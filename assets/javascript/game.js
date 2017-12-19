@@ -15,12 +15,22 @@ $(document).ready(function(){
     
 
     document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-   
+    var winText = document.getElementById("win-count");
+    var lossText = document.getElementById("loss-count");
     var targetNumber = "randomNumGenerator";
 
     $("randomNumGenerator").text(targetNumber);
 
-    var counter = 0
+    var counter = "totalScore";
+    var crystalValue = ("New Score: " + counter);
+        if (counter === targetNumber) {
+            winText.textContent++;
+
+        }
+
+        else if (counter < targetNumber) {
+            lossText.textContent++;
+        }
    
     // var targetNum = randomNum[Math.floor(Math.random() * randomNum.length)];
 
@@ -41,6 +51,8 @@ $("#button-4").on("click", function(){
 });
 
 // document.getElementById("totalScore").innerHTML = crystalValue;
+
+
 
 });
 
