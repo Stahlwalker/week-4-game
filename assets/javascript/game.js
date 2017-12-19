@@ -45,6 +45,11 @@ var counter = 0;
 var crystalValue = ($(this).attr("totalScore"));
 crystalValue = parseInt(crystalValue);
 
+function add(){
+    crystalValue = userGuess + userGuess;
+    return result;
+}
+
 counter += crystalValue;
 
 if (counter === targetNumber) {
@@ -56,7 +61,7 @@ if (counter === targetNumber) {
 
     }
 
-    else if (counter < targetNumber) {
+    else if (counter > targetNumber) {
         lossText.textContent++;
         function gameReset(){
             document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
