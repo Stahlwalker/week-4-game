@@ -25,14 +25,18 @@ $(document).ready(function(){
     var crystalValue = ("New Score: " + counter);
         if (counter === targetNumber) {
             winText.textContent++;
+            function gameReset(){
+                document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+            }
 
         }
 
-        else if (counter < targetNumber) {
+        else if (counter >= targetNumber) {
             lossText.textContent++;
+            function gameReset(){
+                document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+            }
         }
-   
-    // var targetNum = randomNum[Math.floor(Math.random() * randomNum.length)];
 
 $("#button-1").on("click", function(){
     document.getElementById("totalScore").innerHTML = Math.floor(Math.random() * 12) +1;
@@ -51,7 +55,6 @@ $("#button-4").on("click", function(){
 });
 
 // document.getElementById("totalScore").innerHTML = crystalValue;
-
 
 
 });
