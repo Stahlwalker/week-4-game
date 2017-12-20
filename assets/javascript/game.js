@@ -5,15 +5,6 @@ $(document).ready(function(){
 
     //create var firstNum, Operator, secondNum, result
 
-    // var targetNum = [];
-    var gemOne = "button-1";
-    var gemTwo ="button-2";
-    var gemThree = "button-3";
-    var gemFour = "button-4";
-    // var totalScore = 0;
-    var isScore = true;
-    
-
     // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
     var winText = document.getElementById("win-count");
     var lossText = document.getElementById("loss-count");
@@ -39,6 +30,7 @@ $("#button-1").on("click", function(){
     // document.getElementById("totalScore").innerHTML = totalCount;
     totalDisplay();
     checkIfGameOver();
+    
 });
 
 $("#button-2").on("click", function(){
@@ -46,6 +38,7 @@ $("#button-2").on("click", function(){
     // document.getElementById("totalScore").innerHTML = totalCount;
     totalDisplay();
     checkIfGameOver();
+    
 });
 
 $("#button-3").on("click", function(){
@@ -53,6 +46,7 @@ $("#button-3").on("click", function(){
     // document.getElementById("totalScore").innerHTML = totalCount;
     totalDisplay();
     checkIfGameOver();
+    
 });
 
 $("#button-4").on("click", function(){
@@ -61,6 +55,7 @@ $("#button-4").on("click", function(){
     console.log(totalCount);
     totalDisplay();
     checkIfGameOver();
+   
 });
 console.log(totalCount);
 console.log(tarNum);
@@ -76,6 +71,8 @@ function gameReset(){
     totalDisplay();
 }
 
+
+
 function checkIfGameOver(){
 if (totalCount === tarNum) {
     winText.textContent++;
@@ -85,6 +82,7 @@ if (totalCount === tarNum) {
     // }
     console.log(totalCount);
     alert("You Win!")
+    location.reload();
 
 }
 
@@ -96,6 +94,7 @@ else if (totalCount > tarNum) {
     console.log(totalCount);
     console.log(tarNum);
         alert("You lose!, Try again!")
+        location.reload();
 }
 
 
