@@ -63,28 +63,16 @@ function totalDisplay(){
 
 
 function gameReset(){
-    // this works to change the random number but not the value
-    // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-  
-
-    // the value doesn't change with this one nor does the number
-    // document.getElementById("randomNumGenerator").innerHTML = tarNum; 
-
-    // Kayle suggested this one
-    // document.getElementById("randomNumGenerator").innerHTML; 
     tarNum = Math.floor(Math.random() * 120) + 19;
-
-    // Kayle suggest this one to test it
     document.getElementById("randomNumGenerator").innerHTML = tarNum;
     totalCount=0;
     totalDisplay();
+    button1RandomNumber = generateRandomNumber();
+    button2RandomNumber = generateRandomNumber();
+    button3RandomNumber = generateRandomNumber();
+    button4RandomNumber = generateRandomNumber();
     
-
-
 }
-
-
-
 
 
 function checkIfGameOver(){
@@ -93,7 +81,7 @@ if (totalCount === tarNum) {
     console.log(totalCount);
     alert("You Win!")
     gameReset();
-    // location.reload();
+   
 
 }
 
@@ -103,7 +91,7 @@ else if (totalCount > tarNum) {
     console.log(tarNum);
     alert("You lose!, Try again!")
     gameReset();
-        // location.reload();
+        
 }
 
 
