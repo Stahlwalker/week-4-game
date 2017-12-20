@@ -71,7 +71,7 @@ function totalDisplay(){
 }
 
 function gameReset(){
-    document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    document.getElementById("randomNumGenerator").innerHTML = tarNum;
     totalCount=0;
     totalDisplay();
 }
