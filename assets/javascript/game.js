@@ -1,9 +1,6 @@
 
 $(document).ready(function(){
-
-    // Your code here...
-
-    //create var firstNum, Operator, secondNum, result
+   
 
     // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
     var winText = document.getElementById("win-count");
@@ -66,16 +63,23 @@ function totalDisplay(){
 
 
 function gameReset(){
-    // var tarNum = Math.floor(Math.random() * 120) +19;
-    // $("randomNumGenerator").text(tarNum);
+    // this works to change the random number but not the value
     // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+  
+
+    // the value doesn't change with this one nor does the number
     // document.getElementById("randomNumGenerator").innerHTML = tarNum; 
-    document.getElementById("randomNumGenerator").innerHTML; 
-    // tarNum = Math.floor(Math.random() * 120) + 19;
-    // document.getElementById("randonNumGenerator").innerHTML = "you hit me";
+
+    // Kayle suggested this one
+    // document.getElementById("randomNumGenerator").innerHTML; 
+    tarNum = Math.floor(Math.random() * 120) + 19;
+
+    // Kayle suggest this one to test it
+    document.getElementById("randomNumGenerator").innerHTML = tarNum;
     totalCount=0;
     totalDisplay();
     
+
 
 }
 
@@ -105,17 +109,3 @@ else if (totalCount > tarNum) {
 
 }
 });
-
-
-
-/* Clear/Reset the text field */    
-// function clearFields() {
-//     //reset guess value
-//     counter.value = "targetNumber";
-//     //reset counter variable to 0
-//     counter = 0;
-//     //set randomNumber to be a new random number
-//     randomNumber = Math.floor(Math.random() * 120) +19;
-//     //added to put function out of call stack
-//     return false;
-//   }
