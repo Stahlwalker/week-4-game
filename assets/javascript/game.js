@@ -52,7 +52,6 @@ $("#button-3").on("click", function(){
 $("#button-4").on("click", function(){
     totalCount += button4RandomNumber
     // document.getElementById("totalScore").innerHTML = totalCount;
-    console.log(totalCount);
     totalDisplay();
     checkIfGameOver();
    
@@ -69,8 +68,11 @@ function totalDisplay(){
 function gameReset(){
     // var tarNum = Math.floor(Math.random() * 120) +19;
     // $("randomNumGenerator").text(tarNum);
-    document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
     // document.getElementById("randomNumGenerator").innerHTML = tarNum; 
+    document.getElementById("randomNumGenerator").innerHTML; 
+    // tarNum = Math.floor(Math.random() * 120) + 19;
+    // document.getElementById("randonNumGenerator").innerHTML = "you hit me";
     totalCount=0;
     totalDisplay();
     
