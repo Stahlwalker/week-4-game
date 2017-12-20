@@ -20,54 +20,71 @@ $(document).ready(function(){
     var targetNumber = document.getElementById("randomNumGenerator");
     var userGuess = document.getElementById("totalScore");
 
+
     $("randomNumGenerator").text(targetNumber);
 
+function generateRandomNumber(){
+    return Math.floor(Math.random() * 12) +1; 
+    }
+var totalCount = 0;
+var button1RandomNumber = generateRandomNumber();
+var button2RandomNumber = generateRandomNumber();
+var button3RandomNumber = generateRandomNumber();
+var button4RandomNumber = generateRandomNumber();
+
+
+
+
 $("#button-1").on("click", function(){
-    document.getElementById("totalScore").innerHTML = Math.floor(Math.random() * 12) +1;
+    totalCount += button1RandomNumber
+    document.getElementById("totalScore").innerHTML = totalCount;
 });
 
 $("#button-2").on("click", function(){
-    document.getElementById("totalScore").innerHTML = Math.floor(Math.random() * 12) +1;
+    totalCount += button2RandomNumber
+    document.getElementById("totalScore").innerHTML = totalCount;
 });
 
 $("#button-3").on("click", function(){
-    document.getElementById("totalScore").innerHTML = Math.floor(Math.random() * 12) +1;
+    totalCount += button3RandomNumber
+    document.getElementById("totalScore").innerHTML = totalCount;
 });
 
 $("#button-4").on("click", function(){
-    document.getElementById("totalScore").innerHTML = Math.floor(Math.random() * 12) +1;
+    totalCount += button4RandomNumber
+    document.getElementById("totalScore").innerHTML = totalCount;
 });
 
-// document.getElementById("totalScore").innerHTML = crystalValue;
-var counter = 0;
-// var crystalValue = ("New Score: " + counter);
+// // document.getElementById("totalScore").innerHTML = crystalValue;
+// var counter = 0;
+// // var crystalValue = ("New Score: " + counter);
 
-var crystalValue = ($(this).attr("totalScore"));
-crystalValue = parseInt(crystalValue);
+// var crystalValue = ($(this).attr("totalScore"));
+// crystalValue = parseInt(crystalValue);
 
-function add(){
-    crystalValue = userGuess + userGuess;
-    return result;
-}
+// function add(){
+//     crystalValue = userGuess + userGuess;
+//     return result;
+// }
 
-counter += crystalValue;
+// counter += crystalValue;
 
-if (counter === targetNumber) {
-        winText.textContent++;
-        function gameReset(){
-            document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-        }
-        alert("You Win!")
+// if (counter === targetNumber) {
+//         winText.textContent++;
+//         function gameReset(){
+//             document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+//         }
+//         alert("You Win!")
 
-    }
+//     }
 
-    else if (counter > targetNumber) {
-        lossText.textContent++;
-        function gameReset(){
-            document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-        }
-            alert("You lose!, Try again!")
-    }
+//     else if (counter > targetNumber) {
+//         lossText.textContent++;
+//         function gameReset(){
+//             document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+//         }
+//             alert("You lose!, Try again!")
+//     }
 
 });
 
