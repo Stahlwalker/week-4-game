@@ -32,60 +32,56 @@ var button2RandomNumber = generateRandomNumber();
 var button3RandomNumber = generateRandomNumber();
 var button4RandomNumber = generateRandomNumber();
 
-
-
-
 $("#button-1").on("click", function(){
     totalCount += button1RandomNumber
     document.getElementById("totalScore").innerHTML = totalCount;
+    checkIfGameOver();
 });
 
 $("#button-2").on("click", function(){
     totalCount += button2RandomNumber
     document.getElementById("totalScore").innerHTML = totalCount;
+    checkIfGameOver();
 });
 
 $("#button-3").on("click", function(){
     totalCount += button3RandomNumber
     document.getElementById("totalScore").innerHTML = totalCount;
+    checkIfGameOver();
 });
 
 $("#button-4").on("click", function(){
     totalCount += button4RandomNumber
     document.getElementById("totalScore").innerHTML = totalCount;
+    console.log(totalCount);
+    checkIfGameOver();
 });
+console.log(totalCount);
+console.log(targetNumber);
 
-// // document.getElementById("totalScore").innerHTML = crystalValue;
-// var counter = 0;
-// // var crystalValue = ("New Score: " + counter);
+function checkIfGameOver(){
+if (totalCount === targetNumber) {
+    winText.textContent++;
+    function gameReset(){
+        document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    }
+    console.log(totalCount);
+    alert("You Win!")
 
-// var crystalValue = ($(this).attr("totalScore"));
-// crystalValue = parseInt(crystalValue);
+}
 
-// function add(){
-//     crystalValue = userGuess + userGuess;
-//     return result;
-// }
+else if (totalCount > targetNumber) {
+    lossText.textContent++;
+    function gameReset(){
+        document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    }
+    console.log(totalCount);
+    console.log(targetNumber);
+        alert("You lose!, Try again!")
+}
 
-// counter += crystalValue;
 
-// if (counter === targetNumber) {
-//         winText.textContent++;
-//         function gameReset(){
-//             document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-//         }
-//         alert("You Win!")
-
-//     }
-
-//     else if (counter > targetNumber) {
-//         lossText.textContent++;
-//         function gameReset(){
-//             document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-//         }
-//             alert("You lose!, Try again!")
-//     }
-
+}
 });
 
 
@@ -101,18 +97,3 @@ $("#button-4").on("click", function(){
 //     //added to put function out of call stack
 //     return false;
 //   }
-
-
-// var totalScore = function (score) {
-//     if (score < targetNum) {
-//         return "Winner";
-//     }
-//     return "Loser";
-// };
-
-// function totalScore(score) {
-//     if (score < targetNum) {
-//         return "Winner";
-//     }
-//     return "Loser";
-// };
