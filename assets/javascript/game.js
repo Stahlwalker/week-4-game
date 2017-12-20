@@ -67,10 +67,14 @@ function totalDisplay(){
 
 
 function gameReset(){
-    document.getElementById("randomNumGenerator").innerHTML = tarNum;
+    // var tarNum = Math.floor(Math.random() * 120) +19;
+    // $("randomNumGenerator").text(tarNum);
+    document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    // document.getElementById("randomNumGenerator").innerHTML = tarNum; 
     totalCount=0;
     totalDisplay();
-   
+    
+
 }
 
 
@@ -80,24 +84,19 @@ function gameReset(){
 function checkIfGameOver(){
 if (totalCount === tarNum) {
     winText.textContent++;
-    gameReset();
-    // function gameReset(){
-    //     document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-    // }
     console.log(totalCount);
     alert("You Win!")
+    gameReset();
     // location.reload();
 
 }
 
 else if (totalCount > tarNum) {
     lossText.textContent++;
-    gameReset();
-    //     document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-    // }
     console.log(totalCount);
     console.log(tarNum);
-        alert("You lose!, Try again!")
+    alert("You lose!, Try again!")
+    gameReset();
         // location.reload();
 }
 
