@@ -65,11 +65,15 @@ function totalDisplay(){
 
 }
 
+
 function gameReset(){
     document.getElementById("randomNumGenerator").innerHTML = tarNum;
     totalCount=0;
     totalDisplay();
+   
 }
+
+
 
 
 
@@ -82,7 +86,7 @@ if (totalCount === tarNum) {
     // }
     console.log(totalCount);
     alert("You Win!")
-    location.reload();
+    // location.reload();
 
 }
 
@@ -94,7 +98,7 @@ else if (totalCount > tarNum) {
     console.log(totalCount);
     console.log(tarNum);
         alert("You lose!, Try again!")
-        location.reload();
+        // location.reload();
 }
 
 
