@@ -14,14 +14,16 @@ $(document).ready(function(){
     var isScore = true;
     
 
-    document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    // document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
     var winText = document.getElementById("win-count");
     var lossText = document.getElementById("loss-count");
-    var targetNumber = document.getElementById("randomNumGenerator");
+    // var targetNumber = document.getElementById("randomNumGenerator");
+    var tarNum = Math.floor(Math.random() * 120) +19;
     var userGuess = document.getElementById("totalScore");
+    document.getElementById("randomNumGenerator").innerHTML = tarNum;
 
 
-    $("randomNumGenerator").text(targetNumber);
+    $("randomNumGenerator").text(tarNum);
 
 function generateRandomNumber(){
     return Math.floor(Math.random() * 12) +1; 
@@ -34,49 +36,65 @@ var button4RandomNumber = generateRandomNumber();
 
 $("#button-1").on("click", function(){
     totalCount += button1RandomNumber
-    document.getElementById("totalScore").innerHTML = totalCount;
+    // document.getElementById("totalScore").innerHTML = totalCount;
+    totalDisplay();
     checkIfGameOver();
 });
 
 $("#button-2").on("click", function(){
     totalCount += button2RandomNumber
-    document.getElementById("totalScore").innerHTML = totalCount;
+    // document.getElementById("totalScore").innerHTML = totalCount;
+    totalDisplay();
     checkIfGameOver();
 });
 
 $("#button-3").on("click", function(){
     totalCount += button3RandomNumber
-    document.getElementById("totalScore").innerHTML = totalCount;
+    // document.getElementById("totalScore").innerHTML = totalCount;
+    totalDisplay();
     checkIfGameOver();
 });
 
 $("#button-4").on("click", function(){
     totalCount += button4RandomNumber
-    document.getElementById("totalScore").innerHTML = totalCount;
+    // document.getElementById("totalScore").innerHTML = totalCount;
     console.log(totalCount);
+    totalDisplay();
     checkIfGameOver();
 });
 console.log(totalCount);
-console.log(targetNumber);
+console.log(tarNum);
+
+function totalDisplay(){
+    document.getElementById("totalScore").innerHTML = totalCount;
+
+}
+
+function gameReset(){
+    document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    totalCount=0;
+    totalDisplay();
+}
 
 function checkIfGameOver(){
-if (totalCount === targetNumber) {
+if (totalCount === tarNum) {
     winText.textContent++;
-    function gameReset(){
-        document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-    }
+    gameReset();
+    // function gameReset(){
+    //     document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    // }
     console.log(totalCount);
     alert("You Win!")
 
 }
 
-else if (totalCount > targetNumber) {
+else if (totalCount > tarNum) {
     lossText.textContent++;
-    function gameReset(){
-        document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
-    }
+    gameReset();
+    //     document.getElementById("randomNumGenerator").innerHTML = Math.floor(Math.random() * 120) +19;
+    // }
     console.log(totalCount);
-    console.log(targetNumber);
+    console.log(tarNum);
         alert("You lose!, Try again!")
 }
 
