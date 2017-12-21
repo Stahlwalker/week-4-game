@@ -32,7 +32,7 @@ body {
 
 .col-md-6{
     border-style: solid;
-    border-color: #0e6635;
+    border-color: #353533;
     background-color: #ffffff;
     color: #777777;
     margin-left: 30px;
@@ -50,8 +50,8 @@ body {
 
 .col-md-3{
     border-style: solid;
-    border-color: #dddddd;
-    background-color: #88b0f8;
+    border-color: #353533;
+    background-color: #77e492;
     color: #777777;
     margin-left: 30px;
     padding-bottom: 25px;
@@ -61,9 +61,9 @@ body {
 
 .col-md-4{
     border-style: solid;
-    border-color: #d9ff00;
-    background-color: #b0fad5;
-    color: #777777;
+    border-color: #353533;
+    background-color: #585858;
+    color: #d3d2d2;
     margin-left: 30px;
     padding-bottom: 40px;
     padding-top: 20px;
@@ -71,8 +71,8 @@ body {
 
 .col-md-2{
     border-style: solid;
-    border-color: #edf0e0;
-    background-color: #ee99a5;
+    border-color: #353533;
+    background-color: #77e492;
     color: #777777;
     margin-left: 150px;
     padding-bottom: 40px;
@@ -85,8 +85,8 @@ body {
 
 .col-md-5{
     border-style: solid;
-    border-color: #dddddd;
-    background-color: #053a9c;
+    border-color: #353533;
+    background-color: #77e492;
     color: #777777;
     height: 185px;
     width: 201px;
@@ -94,9 +94,9 @@ body {
 
 .panel-body{
     border-style: solid;
-    border-color: #dddddd;
-    background-color: #83e5f7;
-    color: #777777;
+    border-color: black;
+    background-color: black;
+    color: black;
     height: 175px;
     width: 575px;
     margin-top: 45px;
@@ -105,8 +105,8 @@ body {
 
 .score{
     border-style: solid;
-    border-color: #dddddd;
-    background-color: #46e615;
+    border-color: #353533;
+    background-color: #77e492;
     color: #777777;
     margin-left: 15px;
     padding-bottom: 25px;
@@ -121,6 +121,7 @@ body {
 
 #totalScore{
     font-size: 50px;
+    color: #777777;
 }
 
 /* #win-count{
